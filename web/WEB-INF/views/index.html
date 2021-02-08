@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1" http-equiv="Content-Type" content="text/html;ISO-8859-1"/>
+    <title>Title</title>
+</head>
+<body>
+<h1>Spring MVC Internationalization i18n Example</h1>
+
+Language : <a href="?lang=en">English</a> | <a href="?lang=tr">Turkish</a>
+<p style="font-size: 16px;" th:text="${beanCount}"></p>
+<p th:text="${message}"></p>
+
+<p>
+    <label th:text="${deneme}"></label><br/>
+    <label>İİİİŞŞŞĞĞĞıığğ</label><br/>
+    <label th:text="#{welcome.greeting}"></label>
+    <label th:text="${startMeeting}"></label>
+</p>
+<p>Beanler</p>
+<table>
+    <tr th:each="bean : ${beanList}">
+        <td th:text="${bean.key}"></td>
+        <td th:text="${bean.value}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
